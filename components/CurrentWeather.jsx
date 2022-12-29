@@ -27,7 +27,6 @@ function Detail({ weather }) {
               <span>{weather?.current.highTemp}</span>
               <span>&deg;</span>
             </span>
-
             <span>
               <FontAwesomeIcon icon={faArrowDown} />
               <span>{weather?.current.lowTemp}</span>

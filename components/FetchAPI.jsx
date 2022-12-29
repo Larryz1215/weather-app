@@ -1,8 +1,12 @@
 import axios from "axios";
+
+
 const getWeatherData = (lat, lon) => {
+  const BASE_URL ="https://api.open-meteo.com/v1/forecast?"
+  const UNITS  ="&hourly=temperature_2m,relativehumidity_2m,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_sum,rain_sum&current_weather=true&timezone=auto"
   return axios
     .get(
-      `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=temperature_2m,relativehumidity_2m,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_sum,rain_sum&current_weather=true&timezone=auto`
+      `${BASE_URL}latitude=${lat}&longitude=${lon}${UNITS}`
     )
     .then(({ data }) => {
       console.log("data:", data);

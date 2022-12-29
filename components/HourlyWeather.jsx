@@ -2,9 +2,6 @@ import React from "react";
 import moment from "moment/moment";
 import { ICON_MAP } from "../components/iconMap";
 const HourlyWeather = ({ weather }) => {
-  const HOUR_FORMATTER = new Intl.DateTimeFormat(undefined, {
-    hour: "numeric",
-  });
   return (
     <div className="hourlyWeather">
       <h1>HourlyWeather</h1>
