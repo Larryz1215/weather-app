@@ -1,5 +1,6 @@
 import React from "react";
 import moment from "moment/moment";
+import { ICON_MAP } from "../components/iconMap";
 const HourlyWeather = ({ weather }) => {
   const HOUR_FORMATTER = new Intl.DateTimeFormat(undefined, {
     hour: "numeric",
@@ -12,7 +13,7 @@ const HourlyWeather = ({ weather }) => {
           <div key={index} className="hourlyInfo">
             <div className="hourlyElement">
               <img
-                src={`../icons/${time.iconCode}.svg`}
+                src={`../icons/${ICON_MAP.get(time.iconCode)}.svg`}
                 className="smallIcon"
               ></img>
             </div>
@@ -32,8 +33,8 @@ const HourlyWeather = ({ weather }) => {
               <span>{time.windspeed}</span>
             </div>
             <div className="hourlyText">
-              <div>降雨機率</div>
-              <span>{time.rain}</span>
+              <div>濕度</div>
+              <span>{time.humidity}%</span>
             </div>
           </div>
         ))}

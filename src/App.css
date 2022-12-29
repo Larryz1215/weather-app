@@ -1,77 +1,102 @@
 body {
+  background-image: url("icons/background.jpg");
+}
+
+#root {
+  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
 }
 .app {
-  margin: 0;
-  padding: 0;
-  background-color: rgb(255, 255, 255);
+  color: rgb(241, 235, 235);
+  width: 600px;
+  margin: 0.5rem;
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
-.area{
-display: flex;
-margin-top: 1rem;
-
-}
-.area span{
-    font-size: large;
-margin:  0 1rem ;
-padding: 0.5rem;
-cursor: pointer;
-}
-.area span:hover{
-color: coral;
-}
-.weather {
-  background-color: rgb(255, 255, 255);
+.area {
   display: flex;
-  flex-direction: row;
-  height: 100px;
+  margin-top: 1rem;
 }
-.left {
-  width: 30%;
+.area span {
+  font-size: large;
+  font-weight: 600;
+  margin: 0 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
 }
+.area span:hover {
+  color: coral;
+}
+.currentWeather {
+  display: flex;
+}
+
 .right {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
 }
-.currentElement {
-  width: 70px;
+.right div {
   margin-left: 1rem;
 }
+.currentTemp {
+  display: flex;
+  flex-direction: column;
+}
+.currentTemp div {
+  display: flex;
+  font-size: 4rem;
+  font-weight: 200;
+}
+.currentTemp div span {
+  top: 0;
+}
+.currentTemp span {
+  margin-top: 0.3rem;
+  display: flex;
+  justify-content: space-around;
+}
+.currentWd {
+  font-size: 2rem;
+}
+
 .iconLarge {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
 }
 
 .daily {
   display: flex;
+  flex-direction: row;
   margin-top: 1rem;
+  flex-wrap: wrap;
   justify-content: space-between;
+  justify-content: flex-start;
 }
 .dailyElement {
-  width: 90px;
-  margin:  1rem;
-  padding: 0 1rem;
-  border: 1px solid black;
-  border-radius: 5px;
+  width: 80px;
+  margin: 0 1rem;
+  padding: 1rem;
   text-align: center;
 }
 .dailyInfo {
-    display: flex;
-    justify-content: space-between;
-  }
+  display: flex;
+  justify-content: space-between;
+}
 .smallIcon {
   width: 50px;
   height: 50px;
 }
 .hourlyWeather {
-  width: 600px;
+  min-width: 600px;
 }
 .hourlyInfo {
   display: flex;
@@ -84,4 +109,3 @@ color: coral;
   margin: 1rem;
   padding: 1rem;
 }
-

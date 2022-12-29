@@ -1,5 +1,6 @@
 import React from "react";
 import moment from "moment/moment";
+import { ICON_MAP } from "../components/iconMap";
 const DailyWeather = ({ weather }) => {
   return (
     <div className="daily">
@@ -9,7 +10,7 @@ const DailyWeather = ({ weather }) => {
           <h3>{moment(item.timestamp).format("dddd")}</h3>
           <div className="dailyInfo">
             <img
-              src={`../icons/${item.weathercode}.svg`}
+              src={`../icons/${ICON_MAP.get(item.weathercode)}.svg`}
               className="smallIcon"
             ></img>
             <span>
