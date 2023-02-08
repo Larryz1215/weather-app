@@ -19,18 +19,18 @@ const HourlyWeather = ({ weather }) => {
               <span>{moment(time.time).format("LT")}</span>
             </div>
             <div className="hourlyText">
-              <div>溫度</div>
+              <div>Temp</div>
               <span>
                 {time.temp}
                 <span>&deg;</span>
               </span>
             </div>
             <div className="hourlyText">
-              <div>風速</div>
+              <div>WindSpeed</div>
               <span>{time.windspeed}</span>
             </div>
             <div className="hourlyText">
-              <div>濕度</div>
+              <div>Humid</div>
               <span>{time.humidity}%</span>
             </div>
           </div>
